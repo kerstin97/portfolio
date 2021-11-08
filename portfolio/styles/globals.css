@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: IBM Plex Sans,-apple-system, Roboto, sans-serif;
+  background-color: #100D12;
 }
 
 a {
@@ -13,4 +14,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+svg {
+  background: linear-gradient(180deg, rgba(26,32,44,1) 0%, rgba(49,55,66,1) 49%, rgba(27,33,45,1) 100%);
 }
