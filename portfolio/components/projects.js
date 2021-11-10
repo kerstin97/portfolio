@@ -3,7 +3,7 @@ import Project from './project';
 
 export default function Projects() {
     return (
-        <>
+        <section id="projects">
             <Heading bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" bgClip="text" size="2xl">Projects</Heading>
              <Stack direction="column" spacing="24px">
                  <Project 
@@ -22,6 +22,6 @@ export default function Projects() {
                     link="https://portfolio.fh-salzburg.ac.at/projects/2021-dog-date"
                 />
             </Stack>
-        </>
+        </section>
     )
 }

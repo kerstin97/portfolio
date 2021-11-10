@@ -3,9 +3,11 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Projects from '../components/projects'
 import Hello from '../components/hello'
+import Timeline from '../components/timeline'
 import "@fontsource/ibm-plex-sans"
 import { Grid, GridItem, useColorMode, useColorModeValue, Button, Container, VStack } from "@chakra-ui/react"
 import React from 'react'
+import Navigation from '../components/navigation'
 
 export default function Home() {
   const {toggleColorMode} = useColorMode();
@@ -19,6 +21,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Navigation/>
         <VStack>
           <Hello/>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -28,6 +31,10 @@ export default function Home() {
           <Projects/>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#1A202C"  d="M0,160L48,176C96,192,192,224,288,229.3C384,235,480,213,576,197.3C672,181,768,171,864,176C960,181,1056,203,1152,224C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+          <Timeline/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#1A202C" d="M0,96L30,133.3C60,171,120,245,180,261.3C240,277,300,235,360,186.7C420,139,480,85,540,101.3C600,117,660,203,720,234.7C780,267,840,245,900,224C960,203,1020,181,1080,160C1140,139,1200,117,1260,106.7C1320,96,1380,96,1410,96L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
           </svg>
           <Button onClick={toggleColorMode}>mode</Button>
         </VStack>

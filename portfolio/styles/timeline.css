@@ -1,0 +1,29 @@
+.timeline-container{
+    max-width: 800px;
+    margin: 50px 0px;
+    word-wrap: anywhere;
+}
+.timeline-entry{
+    display: grid;
+    grid-template-columns: 120px 44px auto;
+    margin-top: 1.2rem;
+}
+.timeline-entry-time{
+    text-align: right;
+}
+.timeline-entry-icon{
+    margin: 4px 10px 0px 10px;
+}
+.timeline-entry-discription{
+    margin: 10px 0px 0px 15px;
+    position: relative;
+}
+.timeline-entry-discription::before{
+    content: "";
+    background-color: white;
+    position: absolute;
+    height: Calc(100% + 1.2rem);
+    left: -2.3rem;
+    top: -0.5rem;
+    width: 0.1rem;
+}

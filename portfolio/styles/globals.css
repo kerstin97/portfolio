@@ -8,9 +8,10 @@ body {
 }
 
 a {
-  color: inherit;
+  color: pink;
   text-decoration: none;
 }
+
 
 * {
   box-sizing: border-box;
