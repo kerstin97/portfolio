@@ -8,7 +8,6 @@ export default function Navigation() {
 
     function setSelected(path) {
         router.push(path);
-        console.log(router.asPath)
     }
     const style = {
         color: '#E96685',
@@ -31,33 +30,33 @@ export default function Navigation() {
     }
 
 
-     useEffect(() => {
+    //  useEffect(() => {
 
-         if(typeof window === 'object'){
+    //      if(typeof window === 'object'){
         
-             const hello = document.getElementById("hello");
-             const projects = document.getElementById("projects");
-             const timeline = document.getElementById("timeline");
+    //          const hello = document.getElementById("hello");
+    //          const projects = document.getElementById("projects");
+    //          const timeline = document.getElementById("timeline");
 
             
-            window.addEventListener('scroll', function (e) {
-                if(window.scrollY < hello.offsetTop) {
-                    setSelected('#hello');
-                }
-                else if (window.scrollY < projects.offsetTop)
-                {
-                    setSelected('#projects');
-                }
-                else if (window.scrollY < timeline.offsetTop)
-                {
-                    setSelected('#timeline');
-                }
-                else {
-                    setSelected('#timeline');
-                }
-            });
-        }
-     })
+    //         window.addEventListener('scroll', function (e) {
+    //             if(window.scrollY < hello.offsetTop) {
+    //                 setSelected('#hello');
+    //             }
+    //             else if (window.scrollY < projects.offsetTop)
+    //             {
+    //                 setSelected('#projects');
+    //             }
+    //             else if (window.scrollY < timeline.offsetTop)
+    //             {
+    //                 setSelected('#timeline');
+    //             }
+    //             else {
+    //                 setSelected('#timeline');
+    //             }
+    //         });
+    //     }
+    //  })
 
     return (
 
@@ -65,8 +64,8 @@ export default function Navigation() {
             <Link onClick={() => setSelected('#hello')}  fontSize="2xl" style={router.asPath ==="/#hello" ? style : null}>Hello</Link>
             <Link onClick={() => setSelected('#projects')} fontSize="2xl" style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
             <Link onClick={() => setSelected('#timeline')} fontSize="2xl" style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
-            <Link onClick={() => setSelected('#hello')} fontSize="2xl" style={router.asPath ==="/#hello" ? style : null}>About Me</Link>
-            <Link onClick={() => setSelected('#')} fontSize="2xl" style={router.asPath ==="/#" ? style : null}>Hire Me</Link>
+            <Link onClick={() => setSelected('#aboutme')} fontSize="2xl" style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
+            <Link onClick={() => setSelected('#hireme')} fontSize="2xl" style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
         </VStack>
 
     )
