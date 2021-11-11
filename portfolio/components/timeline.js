@@ -26,7 +26,7 @@ export default function Timeline() {
                             <div className="timeline-entry-discription"><i>
                                 <p>I was part of the developer team for DasWeltauto. Languages: HTML5, CSS, Angular </p>
                                 <a href="https://www.dasweltauto.at/" target="_blank" rel="noopener noreferrer">https://www.dasweltauto.at/</a>
-                                <p>Later I lead the project 'Digitale Antragsstrecke/Porsche Bank Shop' with some colleagues, which realizes the process of buying a car online. </p>
+                                <p>Later I lead the project Digitale Antragsstrecke/Porsche Bank Shop with some colleagues, which realizes the process of buying a car online. </p>
                                 <a href="https://www.porschebank.at/shop/fahrzeugsuche" target="_blank" rel="noopener noreferrer">https://www.porschebank.at/shop/fahrzeugsuche</a>
                             </i></div>
                         </div>
