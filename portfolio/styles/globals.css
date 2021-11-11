@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: IBM Plex Sans,-apple-system, Roboto, sans-serif;
   background-color: #100D12;
+  scroll-behavior: smooth;
 }
 
 a {
