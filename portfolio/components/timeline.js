@@ -1,9 +1,9 @@
 import {TimeIcon} from '@chakra-ui/icons';
-import {Heading} from '@chakra-ui/react';
+import {Heading, Center} from '@chakra-ui/react';
 export default function Timeline() {
     return (
         <section id="timeline">
-        <Heading bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" bgClip="text" size="2xl">Timeline</Heading>
+        <Center><Heading lineHeight={1.5}  bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" bgClip="text" size="2xl">Timeline</Heading></Center>
         <div className="center-column">
             <div className="timeline-container">
                 <div className="timeline-body">

@@ -4,8 +4,8 @@ import Project from './project';
 export default function Projects() {
     return (
         <section id="projects">
-            <Heading bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" bgClip="text" size="2xl">Projects</Heading>
-             <Stack direction="column" spacing="24px">
+            <Center><Heading pr={"50px"} pl={"50px"} lineHeight={1.5} bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" bgClip="text" size="2xl">Projects</Heading></Center>
+             <Stack  pr={"50px"} pl={"50px"}  direction="column" spacing="24px">
                  <Project 
                     title="DogDate" 
                     description="DogDate is a platform where dog owners can search for dogfriends (social media for dogs). Once the profile has been created, you can search for dog friends on the map. Either you contact the dog owner directly via the message function or you look at the profile." 

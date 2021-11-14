@@ -1,0 +1,6 @@
+.leftSection {
+    position: fixed;
+    left: 50px;
+    top: 0;
+    bottom:0;
+}

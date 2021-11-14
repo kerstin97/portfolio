@@ -21,16 +21,17 @@ export default function Navigation() {
         backgroundSize: '15px 10px',
         backgroundPosition: '2px 29px',
         animation: 'move 15s linear infinite',
-        webkitAnimation: 'move 15s linear infinite',
+        WebkitAnimation: 'move 15s linear infinite',
         animationPlayState: 'paused',
         textDecoration: 'none',
         backgroundColor: 'transparent',
-        webkitTextDecorationSkip: 'objects',
+        WebkitTextDecorationSkip: 'objects',
 
     }
 
 
-    //  useEffect(() => {
+      //useEffect(() => {
+
 
     //      if(typeof window === 'object'){
         
@@ -61,7 +62,7 @@ export default function Navigation() {
     return (
 
         <VStack className="navigation" pos="fixed" top="0" right="50px" display="flex" justifyContent="space-evenly" flexDir="column" height="100%">
-            <Link onClick={() => setSelected('#hello')}  fontSize="2xl" style={router.asPath ==="/#hello" ? style : null}>Hello</Link>
+            <Link onClick={() => setSelected('#')}  fontSize="2xl" style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
             <Link onClick={() => setSelected('#projects')} fontSize="2xl" style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
             <Link onClick={() => setSelected('#timeline')} fontSize="2xl" style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
             <Link onClick={() => setSelected('#aboutme')} fontSize="2xl" style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>

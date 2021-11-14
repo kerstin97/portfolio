@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import '../theme/styles.css';
 import '../styles/timeline.css';
 import '../styles/gallery.css';
+import '../styles/leftSection.css';
 
 import { ChakraProvider } from '@chakra-ui/react';
 
