@@ -61,11 +61,15 @@ export default function Navigation() {
 
     return (
 
-        <VStack className="navigation" pos="fixed" top="0" right="50px" display="flex" justifyContent="space-evenly" flexDir="column" height="100%">
+        <VStack className="navigation" pos="fixed" top="0" right="50px" display="flex" justifyContent="center" flexDir="column" height="100%">
             <Link onClick={() => setSelected('#')}  fontSize="2xl" style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
+            <div className="vl"></div>
             <Link onClick={() => setSelected('#projects')} fontSize="2xl" style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
+            <div className="vl"></div>
             <Link onClick={() => setSelected('#timeline')} fontSize="2xl" style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
+            <div className="vl"></div>
             <Link onClick={() => setSelected('#aboutme')} fontSize="2xl" style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
+            <div className="vl"></div>
             <Link onClick={() => setSelected('#hireme')} fontSize="2xl" style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
         </VStack>
 
