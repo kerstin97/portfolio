@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <LeftSection toggleColorMode={toggleColorMode} bgColor={bgColor}/>
+        <LeftSection toggleColorMode={toggleColorMode}/>
         <VStack className={styles.content}>
           <Hello/>
             <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
