@@ -1,0 +1,10 @@
+.navigation {
+    right: 50px;
+}
+
+  
+@media (max-width: 1600px) { 
+    .navigation {
+      right: 10px;
+    }
+}

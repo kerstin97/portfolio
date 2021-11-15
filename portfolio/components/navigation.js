@@ -1,14 +1,22 @@
-import { VStack,Text, Link } from '@chakra-ui/react';
-import React, { useEffect } from 'react';
+import { VStack,Text, Link, IconButton, Flex } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 
 
 export default function Navigation() {
     const router = useRouter()
+    const [display, changeDisplay] = useState('none')
 
     function setSelected(path) {
         router.push(path);
     }
+
+    function selectMobile(path) {
+        changeDisplay('none');
+        setSelected(path);
+    }
+
     const style = {
         color: '#E96685',
         paddingBottom: '5px',
@@ -60,18 +68,69 @@ export default function Navigation() {
     //  })
 
     return (
+        <>
+            <VStack className="navigation" pos="fixed" top="0" display={['none','none','flex','flex']} justifyContent="center" flexDir="column" height="100%">
+                <Link onClick={() => setSelected('#')}  fontSize="2xl" style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
+                <div className="vl"></div>
+                <Link onClick={() => setSelected('#projects')} fontSize="2xl" style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
+                <div className="vl"></div>
+                <Link onClick={() => setSelected('#timeline')} fontSize="2xl" style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
+                <div className="vl"></div>
+                <Link onClick={() => setSelected('#aboutme')} fontSize="2xl" style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
+                <div className="vl"></div>
+                <Link onClick={() => setSelected('#hireme')} fontSize="2xl" style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
+            </VStack>
 
-        <VStack className="navigation" pos="fixed" top="0" right="50px" display="flex" justifyContent="center" flexDir="column" height="100%">
-            <Link onClick={() => setSelected('#')}  fontSize="2xl" style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
-            <div className="vl"></div>
-            <Link onClick={() => setSelected('#projects')} fontSize="2xl" style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
-            <div className="vl"></div>
-            <Link onClick={() => setSelected('#timeline')} fontSize="2xl" style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
-            <div className="vl"></div>
-            <Link onClick={() => setSelected('#aboutme')} fontSize="2xl" style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
-            <div className="vl"></div>
-            <Link onClick={() => setSelected('#hireme')} fontSize="2xl" style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
-        </VStack>
+            <IconButton
+                aria-label="Open Menu"
+                size="lg"
+                mr={2}
+                icon={<HamburgerIcon />}
+                display={['flex','flex','none','none']}
+                position="fixed"
+                top="1rem"
+                right="1rem"
+                onClick={()=>changeDisplay('flex')}
+            />
+
+            <Flex 
+                w="100vw"
+                h="100vh"
+                bgColor="gray.50"
+                zIndex={20}
+                pos="fixed"
+                top="0"
+                left="0"
+                overflowY="auto"
+                flexDir="column"
+                display={display}
+            >
+                <Flex justify="flex-end">
+                    <IconButton
+                        mt={2}
+                        mr={2}
+                        aria-label="Close Menu"
+                        size="lg"
+                        icon={
+                            <CloseIcon/>
+                        }
+                        onClick={()=>changeDisplay('none')}
+
+                    />
+                </Flex>
+                <Flex
+                    flexDir="column"
+                    align="center"
+                >
+                    <Link onClick={() => selectMobile('#')}  fontSize="2xl" style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
+                    <Link onClick={() => selectMobile('#projects')} fontSize="2xl" style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
+                    <Link onClick={() => selectMobile('#timeline')} fontSize="2xl" style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
+                    <Link onClick={() => selectMobile('#aboutme')} fontSize="2xl" style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
+                    <Link onClick={() => selectMobile('#hireme')} fontSize="2xl" style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
+                </Flex>
+
+            </Flex>
+        </>
 
     )
 }

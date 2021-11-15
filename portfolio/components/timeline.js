@@ -1,5 +1,5 @@
 import {TimeIcon} from '@chakra-ui/icons';
-import {Heading, Center} from '@chakra-ui/react';
+import {Heading, Center, Text, Link} from '@chakra-ui/react';
 export default function Timeline() {
     return (
         <section id="timeline">
@@ -8,38 +8,38 @@ export default function Timeline() {
             <div className="timeline-container">
                 <div className="timeline-body">
                     <div className="timeline-entry">
-                        <div className="timeline-entry-time">2020 - present</div>
-                        <TimeIcon className="timeline-entry-icon" alt="timeline-clock-icon"></TimeIcon>
+                        <Text className="timeline-entry-time" fontSize="xl">2020 - now</Text>
+                        <TimeIcon className="timeline-entry-icon" width="1.4em" height="1.4em" alt="timeline-clock-icon"></TimeIcon>
                         <div className="timeline-entry-content">
-                            <div className="timeline-entry-title"><h3>Salzburg University of Applied Sciences</h3></div>
+                            <div className="timeline-entry-title"><Heading fontSize="xl">Salzburg University of Applied Sciences</Heading></div>
                             <div className="timeline-entry-discription"><i>
-                                <p>This Study includes everything about Multimedia and web development and will finish bacholer as a full stack web dev</p>
-                                <a href="https://multimediatechnology.at" target="_blank" rel="noopener noreferrer">https://multimediatechnology.at</a>
+                                <Text fontSize="xl">This Study includes everything about Multimedia and web development and will finish bacholer as a full stack web dev</Text>
+                                <Link href="https://multimediatechnology.at" target="_blank" rel="noopener noreferrer"><Text fontSize="xl">https://multimediatechnology.at</Text></Link>
                             </i></div>
                         </div>
                     </div>
                     <div className="timeline-entry">
-                        <div className="timeline-entry-time">2016-2020</div>
-                        <TimeIcon className="timeline-entry-icon" alt="timeline-clock-icon"></TimeIcon>
+                        <Text className="timeline-entry-time" fontSize="xl">2016-2020</Text>
+                        <TimeIcon className="timeline-entry-icon" width="1.4em" height="1.4em" alt="timeline-clock-icon"></TimeIcon>
                         <div className="timeline-entry-content">
-                            <div className="timeline-entry-title"><h3>Software Developer and Project Manager @Porsche Informatik</h3></div>
+                            <div className="timeline-entry-title"><Heading fontSize="xl">Software Developer and Project Manager @Porsche Informatik</Heading></div>
                             <div className="timeline-entry-discription"><i>
-                                <p>I was part of the developer team for DasWeltauto. Languages: HTML5, CSS, Angular </p>
-                                <a href="https://www.dasweltauto.at/" target="_blank" rel="noopener noreferrer">https://www.dasweltauto.at/</a>
-                                <p>Later I lead the project Digitale Antragsstrecke/Porsche Bank Shop with some colleagues, which realizes the process of buying a car online. </p>
-                                <a href="https://www.porschebank.at/shop/fahrzeugsuche" target="_blank" rel="noopener noreferrer">https://www.porschebank.at/shop/fahrzeugsuche</a>
+                                <Text fontSize="xl">I was part of the developer team for DasWeltauto. Languages: HTML5, CSS, Angular </Text>
+                                <Link href="https://www.dasweltauto.at/" target="_blank" rel="noopener noreferrer"><Text fontSize="xl">https://www.dasweltauto.at/</Text></Link>
+                                <Text fontSize="xl">Later I lead the project Digitale Antragsstrecke/Porsche Bank Shop with some colleagues, which realizes the process of buying a car online. </Text>
+                                <Link href="https://www.porschebank.at/shop/fahrzeugsuche" target="_blank" rel="noopener noreferrer"><Text fontSize="xl">https://www.porschebank.at/shop/fahrzeugsuche</Text></Link>
                             </i></div>
                         </div>
                     </div>
                     <div className="timeline-entry">
-                        <div className="timeline-entry-time">2011-2016</div>
-                        <TimeIcon className="timeline-entry-icon" alt="timeline-clock-icon"></TimeIcon>
+                        <Text className="timeline-entry-time" fontSize="xl">2011-2016</Text>
+                        <TimeIcon className="timeline-entry-icon" width="1.4em" height="1.4em" alt="timeline-clock-icon"></TimeIcon>
                         <div className="timeline-entry-content">
-                            <div className="timeline-entry-title"><h3>Technical College Braunau</h3></div>
+                            <div className="timeline-entry-title"><Heading fontSize="xl">Technical College Braunau</Heading></div>
                             <div className="timeline-entry-discription"><i>
-                                <p>Electronics / Bionics </p>
-                                <p>Including Microcontroller Programming, Java, C++, Laboratory exercies...</p>
-                                <a href="https://www.htl-braunau.at/live" target="_blank" rel="noopener noreferrer">https://www.htl-braunau.at/live</a>
+                                <Text fontSize="xl">Electronics / Bionics </Text>
+                                <Text fontSize="xl">Including Microcontroller Programming, Java, C++, Laboratory exercies...</Text>
+                                <Link href="https://www.htl-braunau.at/live" target="_blank" rel="noopener noreferrer"><Text fontSize="xl">https://www.htl-braunau.at/live</Text></Link>
                             </i></div>
                         </div>
                     </div>

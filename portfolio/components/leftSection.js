@@ -7,7 +7,7 @@ export default function LeftSection(props) {
         console.log(this)
     }
     return (
-        <VStack className="leftSection" display="flex" pb="50px" justifyContent="space-between" flexDir="column">
+        <VStack className="leftSection" display={['none','none','flex','flex']} pb="50px" justifyContent="space-between" flexDir="column">
             <Image src={"images/logo.svg"} alt="Logo" width="80px" pt="50px"/>
             <Social/>
             <Image src={"images/theme.svg"} width="40px" alt="mode" onClick={props.toggleColorMode}/>

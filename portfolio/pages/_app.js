@@ -3,6 +3,7 @@ import '../theme/styles.css';
 import '../styles/timeline.css';
 import '../styles/gallery.css';
 import '../styles/leftSection.css';
+import '../styles/navigation.css';
 
 import { ChakraProvider } from '@chakra-ui/react';
 
