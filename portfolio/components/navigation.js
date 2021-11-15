@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 
 
-export default function Navigation() {
+export default function Navigation(props) {
     const router = useRouter()
     const [display, changeDisplay] = useState('none')
 
@@ -35,6 +35,10 @@ export default function Navigation() {
         backgroundColor: 'transparent',
         WebkitTextDecorationSkip: 'objects',
 
+    }
+
+    const mobileActive = {
+        color: '#E96685',
     }
 
 
@@ -81,23 +85,26 @@ export default function Navigation() {
                 <Link onClick={() => setSelected('#hireme')} fontSize="2xl" style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
             </VStack>
 
-            <IconButton
-                aria-label="Open Menu"
-                size="lg"
-                mr={2}
-                icon={<HamburgerIcon />}
-                display={['flex','flex','none','none']}
-                position="fixed"
-                top="1rem"
-                right="1rem"
-                onClick={()=>changeDisplay('flex')}
-            />
+            <Flex>
+                <IconButton
+                    aria-label="Open Menu"
+                    size="lg"
+                    mr={2}
+                    icon={<HamburgerIcon />}
+                    display={['flex','flex','none','none']}
+                    position="fixed"
+                    top="1rem"
+                    right="1rem"
+                    onClick={()=>changeDisplay('flex')}
+                />
+            </Flex>
+
 
             <Flex 
                 w="100vw"
                 h="100vh"
-                bgColor="gray.50"
-                zIndex={20}
+                bgColor={props.isDark ? "#1A202C" : "#eabebe"}
+                zIndex={30}
                 pos="fixed"
                 top="0"
                 left="0"
@@ -107,8 +114,8 @@ export default function Navigation() {
             >
                 <Flex justify="flex-end">
                     <IconButton
-                        mt={2}
-                        mr={2}
+                        mt="1rem"
+                        mr="2rem"
                         aria-label="Close Menu"
                         size="lg"
                         icon={
@@ -122,11 +129,11 @@ export default function Navigation() {
                     flexDir="column"
                     align="center"
                 >
-                    <Link onClick={() => selectMobile('#')}  fontSize="2xl" style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
-                    <Link onClick={() => selectMobile('#projects')} fontSize="2xl" style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
-                    <Link onClick={() => selectMobile('#timeline')} fontSize="2xl" style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
-                    <Link onClick={() => selectMobile('#aboutme')} fontSize="2xl" style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
-                    <Link onClick={() => selectMobile('#hireme')} fontSize="2xl" style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
+                    <Link onClick={() => selectMobile('#')}  fontSize="2xl" borderTop="1px solid #fff" borderBottom="1px solid #fff" width="100%" textAlign="center" style={router.asPath ==="/#" || router.asPath ==="/" ? mobileActive : null}>Hello</Link>
+                    <Link onClick={() => selectMobile('#projects')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%"  style={router.asPath ==="/#projects" ? mobileActive : null}>Projects</Link>
+                    <Link onClick={() => selectMobile('#timeline')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%" style={router.asPath ==="/#timeline" ? mobileActive : null}>Timeline</Link>
+                    <Link onClick={() => selectMobile('#aboutme')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%" style={router.asPath ==="/#aboutme" ? mobileActive : null}>About Me</Link>
+                    <Link onClick={() => selectMobile('#hireme')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%" style={router.asPath ==="/#hireme" ? mobileActive : null}>Hire Me</Link>
                 </Flex>
 
             </Flex>

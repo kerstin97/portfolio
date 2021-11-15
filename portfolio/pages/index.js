@@ -51,7 +51,7 @@ export default function Home() {
               background={isDark ? "linear-gradient(180deg, rgba(26,32,44,1) 0%, rgba(49,55,66,1) 49%, rgba(27,33,45,1) 100%)" : "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(233,102,110,0.3981967787114846) 49%, rgba(255,255,255,1)"}
             />
         </VStack>
-        <Navigation/>
+        <Navigation isDark={isDark}/>
           {/*<Grid
             h="200px"
             templateRows="repeat(2, 1fr)"
