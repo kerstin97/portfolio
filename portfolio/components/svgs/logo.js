@@ -34,8 +34,8 @@ function Logo(props) {
         <g data-name="Gruppe 4">
           <g
             data-name="Gruppe 3"
-            fill="#e9666e"
-            stroke="#e9666e"
+            fill="#E96685"
+            stroke="#E96685"
             strokeLinejoin="round"
             strokeWidth={5}
           >

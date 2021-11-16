@@ -98,10 +98,12 @@ export default function Navigation(props) {
                     <IconButton
                         aria-label="Open Menu"
                         size="lg"
+                        variant="outline"
                         mr={2}
                         ml={2}
                         icon={<HamburgerIcon />}
-                        
+                        background="none"
+                        color="#E96685"
                         onClick={()=>changeDisplay('flex')}
                     />
                 </Flex>
@@ -128,6 +130,9 @@ export default function Navigation(props) {
                         mr={2}
                         aria-label="Close Menu"
                         size="lg"
+                        variant="outline"
+                        background="none"
+                        color="#E96685"
                         icon={
                             <CloseIcon/>
                         }
