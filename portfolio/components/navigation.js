@@ -1,7 +1,9 @@
-import { VStack,Text, Link, IconButton, Flex } from '@chakra-ui/react';
+import { VStack,Text, Link, IconButton, Flex, Image, Center, Box } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import Social from './social';
+import Logo from './svgs/logo';
 
 
 export default function Navigation(props) {
@@ -85,23 +87,31 @@ export default function Navigation(props) {
                 <Link onClick={() => setSelected('#hireme')} fontSize="2xl" style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
             </VStack>
 
-            <Flex>
-                <IconButton
-                    aria-label="Open Menu"
-                    size="lg"
-                    mr={2}
-                    icon={<HamburgerIcon />}
-                    display={['flex','flex','none','none']}
-                    position="fixed"
-                    top="1rem"
-                    right="1rem"
-                    onClick={()=>changeDisplay('flex')}
-                />
+            <Flex display={['flex','flex','none','none']} position="fixed" top="0" justifyContent="space-between" alignItems="center" width="100%"
+                bgColor={props.isDark ? "#1A202C" : "#eabebe"}
+            >
+                <Box paddingTop="15"><Logo fill={props.isDark ? "#fff" : "#000"} alt="Logo"/></Box>
+
+                <Center><Social direction="row"/></Center>
+                <Flex>
+                    <Image src={"images/theme.svg"} width="40px" alt="mode" onClick={props.toggleColorMode}/>
+                    <IconButton
+                        aria-label="Open Menu"
+                        size="lg"
+                        mr={2}
+                        ml={2}
+                        icon={<HamburgerIcon />}
+                        
+                        onClick={()=>changeDisplay('flex')}
+                    />
+                </Flex>
+               
+                
             </Flex>
 
 
             <Flex 
-                w="100vw"
+                w="100%"
                 h="100vh"
                 bgColor={props.isDark ? "#1A202C" : "#eabebe"}
                 zIndex={30}
@@ -115,7 +125,7 @@ export default function Navigation(props) {
                 <Flex justify="flex-end">
                     <IconButton
                         mt="1rem"
-                        mr="2rem"
+                        mr={2}
                         aria-label="Close Menu"
                         size="lg"
                         icon={
@@ -128,6 +138,7 @@ export default function Navigation(props) {
                 <Flex
                     flexDir="column"
                     align="center"
+                    pt="10px"
                 >
                     <Link onClick={() => selectMobile('#')}  fontSize="2xl" borderTop="1px solid #fff" borderBottom="1px solid #fff" width="100%" textAlign="center" style={router.asPath ==="/#" || router.asPath ==="/" ? mobileActive : null}>Hello</Link>
                     <Link onClick={() => selectMobile('#projects')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%"  style={router.asPath ==="/#projects" ? mobileActive : null}>Projects</Link>
