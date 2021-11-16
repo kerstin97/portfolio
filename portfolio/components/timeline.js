@@ -3,7 +3,17 @@ import {Heading, Center, Text, Link} from '@chakra-ui/react';
 export default function Timeline() {
     return (
         <section id="timeline">
-        <Center><Heading lineHeight={1.5}  bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" bgClip="text" size="2xl">Timeline</Heading></Center>
+        <Center>
+            <Heading 
+                lineHeight={1.5}  
+                bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" 
+                bgClip="text" 
+                size="2xl"
+            >
+                Timeline
+            </Heading>
+        </Center>
+        
         <div className="center-column">
             <div className="timeline-container">
                 <div className="timeline-body">
