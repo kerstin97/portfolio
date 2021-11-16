@@ -14,12 +14,6 @@
 }
 
 
-@media (max-width: 1600px) {
-  .content {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-}
 
 .footer {
   display: flex;

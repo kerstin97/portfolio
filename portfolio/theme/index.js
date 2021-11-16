@@ -6,10 +6,10 @@ const config = {
   }
 
 const breakpoints = createBreakpoints({
-    sm:'50em',
-    md:'60em',
-    lg:'70em',
-    xl:'80em'
+    sm: "30em",
+    md: "55em",
+    lg: "62em",
+    xl: "80em",
 })
 
 const theme = extendTheme({

@@ -29,7 +29,12 @@ export default function Home() {
 
       <main className={styles.main}>
         <LeftSection toggleColorMode={toggleColorMode} isDark={isDark}/>
-        <VStack className={styles.content}>
+        <VStack 
+          width={["100%","100%", "auto", "auto"]} 
+          pr={["","", "150px", "150px"]} 
+          pl={["","", "150px", "150px"]} 
+          className={styles.content}
+        >
           <Hello/>
           <Wave1 
             fill={isDark ? "#1A202C" : "#fff"} 
