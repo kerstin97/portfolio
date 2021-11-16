@@ -26,7 +26,7 @@ export default function AboutMe() {
     return (
         <section id="aboutme">
             <Center><Heading lineHeight={1.5} bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" bgClip="text" size="2xl">About me</Heading></Center>
-            <Center><Text>I love hiking, meeting my friends, go to the gym and enjoy listen to music and go to music festivals</Text></Center>
+            <Center><Text textAlign="center" fontSize="lg">I love the nature. When I am in the mountains, I feel free. Listening to loud electronic music and visit festivals with my friends makes me happy. Also pushing me to my personal limits in the gym is a passion.</Text></Center>
             <div className="embla" bg={'gray.50'}>
                     <div className="embla__viewport"  ref={emblaRef}>
                         <div className="embla__container">
