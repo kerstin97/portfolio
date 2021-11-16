@@ -25,24 +25,53 @@ export default function AboutMe() {
 
     return (
         <section id="aboutme">
-            <Center><Heading lineHeight={1.5} bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" bgClip="text" size="2xl">About me</Heading></Center>
-            <Center><Text textAlign="center" fontSize="lg">I love the nature. When I am in the mountains, I feel free. Listening to loud electronic music and visit festivals with my friends makes me happy. Also pushing me to my personal limits in the gym is a passion.</Text></Center>
-            <div className="embla" bg={'gray.50'}>
+            <Center>
+                <Heading 
+                    lineHeight={1.5} 
+                    bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" 
+                    bgClip="text" 
+                    size="2xl"
+                >
+                    About me
+                </Heading>
+            </Center>
+            <Center>
+                <Text 
+                    textAlign="center" 
+                    fontSize="lg"
+                    width={["100%","100%","700px","800px"]}
+                    pl={["20px","20px","50px","50px"]}
+                    pr={["20px","20px","50px","50px"]}
+                >
+                    I love the nature. When I am in the mountains, I feel free. Listening to loud electronic music and visit festivals with my friends makes me happy. Also pushing me to my personal limits in the gym is a passion.
+                </Text>
+            </Center>
+
+            <div className="embla" >
                     <div className="embla__viewport"  ref={emblaRef}>
                         <div className="embla__container">
                             <div className="embla__slide">
                                 <div className="embla__slide__inner">
-                                    <Image className="embla__slide__img" src={"images/mountain1.jpg"} alt="A cool cat."/>
+                                    <Image 
+                                        className="embla__slide__img" 
+                                        src={"images/mountain1.jpg"} 
+                                        alt="A cool cat."/>
                                 </div>
                             </div>
                             <div className="embla__slide">
                                 <div className="embla__slide__inner">
-                                    <Image className="embla__slide__img" src={"images/mountain2.jpg"} alt="A cool cat."/>
+                                    <Image 
+                                        className="embla__slide__img" 
+                                        src={"images/mountain2.jpg"} 
+                                        alt="A cool cat."/>
                                 </div>
                             </div>
                             <div className="embla__slide">
                                 <div className="embla__slide__inner">
-                                    <Image className="embla__slide__img" src={"images/mountain3.jpg"} alt="A cool cat."/>
+                                    <Image 
+                                    className="embla__slide__img" 
+                                    src={"images/mountain3.jpg"} 
+                                    alt="A cool cat."/>
                                 </div>
                             </div>
                         </div>
