@@ -22,7 +22,7 @@ export default function Navigation(props) {
     const style = {
         color: '#E96685',
         paddingBottom: '7px',
-        background: 'url("images/star.svg")',
+        background: 'url("assets/star.svg")',
         backgroundRepeat: 'repeat',
         backgroundPositionX: '0%',
         backgroundPositionY: '0%',
