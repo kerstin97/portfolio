@@ -1,4 +1,4 @@
-import { VStack,Text, Link, IconButton, Flex, Image, Center, Box } from '@chakra-ui/react';
+import { VStack, Link, IconButton, Flex, Image, Center, Box } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
@@ -36,24 +36,19 @@ export default function Navigation(props) {
         textDecoration: 'none',
         backgroundColor: 'transparent',
         WebkitTextDecorationSkip: 'objects',
-
     }
 
     const mobileActive = {
         color: '#E96685',
     }
 
-
       //useEffect(() => {
-
-
     //      if(typeof window === 'object'){
         
     //          const hello = document.getElementById("hello");
     //          const projects = document.getElementById("projects");
     //          const timeline = document.getElementById("timeline");
-
-            
+    
     //         window.addEventListener('scroll', function (e) {
     //             if(window.scrollY < hello.offsetTop) {
     //                 setSelected('#hello');
@@ -75,7 +70,15 @@ export default function Navigation(props) {
 
     return (
         <>
-            <VStack className="navigation" pos="fixed" top="0" display={['none','none','flex','flex']} justifyContent="center" flexDir="column" height="100%">
+            <VStack 
+                className="navigation" 
+                pos="fixed" 
+                top="0" 
+                display={['none','none','flex','flex']} 
+                justifyContent="center" 
+                flexDir="column" 
+                height="100%"
+            >
                 <Link onClick={() => setSelected('#')}  fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
                 <div className="vl"></div>
                 <Link onClick={() => setSelected('#projects')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
@@ -87,14 +90,25 @@ export default function Navigation(props) {
                 <Link onClick={() => setSelected('#hireme')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
             </VStack>
 
-            <Flex display={['flex','flex','none','none']} position="fixed" top="0" justifyContent="space-between" alignItems="center" width="100%"
+            <Flex 
+                display={['flex','flex','none','none']} 
+                position="fixed" 
+                top="0" 
+                justifyContent="space-between" 
+                alignItems="center" 
+                width="100%"
                 bgColor={props.isDark ? "#1A202C" : "#eabebe"}
             >
-                <Box paddingTop="15"><Logo fill={props.isDark ? "#fff" : "#000"} alt="Logo"/></Box>
+                <Box paddingTop="15">
+                    <Logo fill={props.isDark ? "#fff" : "#303641"} alt="Logo"/>
+                </Box>
 
-                <Center><Social direction="row"/></Center>
+                <Center>
+                    <Social direction="row"/>
+                </Center>
+
                 <Flex>
-                    <Image src={"images/theme.svg"} width="30px" alt="mode" onClick={props.toggleColorMode}/>
+                    <Image src={"assets/theme.svg"} width="30px" alt="mode" onClick={props.toggleColorMode}/>
                     <IconButton
                         aria-label="Open Menu"
                         size="lg"
@@ -107,10 +121,7 @@ export default function Navigation(props) {
                         onClick={()=>changeDisplay('flex')}
                     />
                 </Flex>
-               
-                
             </Flex>
-
 
             <Flex 
                 w="100%"
@@ -137,7 +148,6 @@ export default function Navigation(props) {
                             <CloseIcon/>
                         }
                         onClick={()=>changeDisplay('none')}
-
                     />
                 </Flex>
                 <Flex
@@ -151,9 +161,7 @@ export default function Navigation(props) {
                     <Link onClick={() => selectMobile('#aboutme')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%" style={router.asPath ==="/#aboutme" ? mobileActive : null}>About Me</Link>
                     <Link onClick={() => selectMobile('#hireme')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%" style={router.asPath ==="/#hireme" ? mobileActive : null}>Hire Me</Link>
                 </Flex>
-
             </Flex>
         </>
-
     )
 }

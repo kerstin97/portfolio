@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
+:root{
+  --pink:  #E96685;
+}
 html,
 body {
-  --pink: #e9666e;
   padding: 0;
   margin: 0;
   font-family: IBM Plex Sans,-apple-system, Roboto, sans-serif;
@@ -17,10 +19,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-
-.vl {
-  border-left: 1px solid var(--pink);
-  height: 50px;
 }

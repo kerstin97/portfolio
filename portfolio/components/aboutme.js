@@ -55,7 +55,7 @@ export default function AboutMe() {
                                     <Image 
                                         className="embla__slide__img" 
                                         src={"images/mountain1.jpg"} 
-                                        alt="A cool cat."/>
+                                        alt="Me in the Mountains."/>
                                 </div>
                             </div>
                             <div className="embla__slide">
@@ -63,7 +63,7 @@ export default function AboutMe() {
                                     <Image 
                                         className="embla__slide__img" 
                                         src={"images/mountain2.jpg"} 
-                                        alt="A cool cat."/>
+                                        alt="Me in the Mountains."/>
                                 </div>
                             </div>
                             <div className="embla__slide">
@@ -71,7 +71,7 @@ export default function AboutMe() {
                                     <Image 
                                     className="embla__slide__img" 
                                     src={"images/mountain3.jpg"} 
-                                    alt="A cool cat."/>
+                                    alt="Me in the Mountains."/>
                                 </div>
                             </div>
                         </div>

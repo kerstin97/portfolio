@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Projects from '../components/projects'
 import Hello from '../components/hello'
 import Timeline from '../components/timeline'
 import "@fontsource/ibm-plex-sans"
-import { Grid, GridItem, useColorMode, useColorModeValue, Button, Container, VStack } from "@chakra-ui/react"
+import { useColorMode, useColorModeValue, VStack } from "@chakra-ui/react"
 import React from 'react'
 import Navigation from '../components/navigation'
 import AboutMe from '../components/aboutme'
@@ -19,6 +18,7 @@ export default function Home() {
   const {colorMode, toggleColorMode} = useColorMode();
   const bgColor = useColorModeValue('gray.50','whiteAlpha.50');
   const isDark = colorMode === 'dark'
+
   return (
     <div className={styles.container} bg={bgColor}>
       <Head>
@@ -55,23 +55,6 @@ export default function Home() {
             />
         </VStack>
         <Navigation isDark={isDark} toggleColorMode={toggleColorMode}/>
-          {/*<Grid
-            h="200px"
-            templateRows="repeat(2, 1fr)"
-            templateColumns="repeat(5, 1fr)"
-            gap={4}
-          >
-            <GridItem rowSpan={2} colSpan={1} bg="tomato" />
-            <Me/>  
-          </Grid>
-           <Grid>
-            <Projects/>
-            <Button onClick={toggleColorMode}>klick</Button>
-          </Grid> */}
-
-      
-      
-
       </main>
 
       {/* <footer className={styles.footer}>

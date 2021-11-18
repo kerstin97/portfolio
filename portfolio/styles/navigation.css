@@ -8,3 +8,8 @@
       right: 10px;
     }
 }
+
+.vl {
+  border-left: 1px solid var(--pink);
+  height: 50px;
+}

@@ -1,4 +1,4 @@
-import { Stack, Center, Heading, Flex, Text, Link, VStack } from '@chakra-ui/react';
+import { Center, Heading, Flex } from '@chakra-ui/react';
 import Project from './project';
 
 export default function Projects() {

@@ -1,4 +1,3 @@
-
 import { Heading, Text, Link, VStack } from '@chakra-ui/react';
 
 export default function Project(props) {
