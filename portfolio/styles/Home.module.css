@@ -1,9 +1,26 @@
-.container {
-  padding: 0 2rem;
+@media (min-width: 701px) {
+  .container {
+    padding: 0 2rem;
+  }
+    
 }
 
+
+@media (min-width: 880px) and (max-width: 1007px){
+  .main{
+    padding: 4rem 75px;
+  }
+}
+
+@media(min-width:1008px) and (max-width: 1500px){
+  .main{
+    padding: 4rem 100px;
+  }
+}
+
+
 .main {
-  padding: 4rem 0;
+
   flex: 1;
   display: flex;
   flex-direction: column;

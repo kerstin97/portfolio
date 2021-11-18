@@ -21,7 +21,7 @@ export default function Navigation(props) {
 
     const style = {
         color: '#E96685',
-        paddingBottom: '5px',
+        paddingBottom: '7px',
         background: 'url("images/star.svg")',
         backgroundRepeat: 'repeat',
         backgroundPositionX: '0%',
@@ -76,15 +76,15 @@ export default function Navigation(props) {
     return (
         <>
             <VStack className="navigation" pos="fixed" top="0" display={['none','none','flex','flex']} justifyContent="center" flexDir="column" height="100%">
-                <Link onClick={() => setSelected('#')}  fontSize="2xl" style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
+                <Link onClick={() => setSelected('#')}  fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
                 <div className="vl"></div>
-                <Link onClick={() => setSelected('#projects')} fontSize="2xl" style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
+                <Link onClick={() => setSelected('#projects')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
                 <div className="vl"></div>
-                <Link onClick={() => setSelected('#timeline')} fontSize="2xl" style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
+                <Link onClick={() => setSelected('#timeline')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
                 <div className="vl"></div>
-                <Link onClick={() => setSelected('#aboutme')} fontSize="2xl" style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
+                <Link onClick={() => setSelected('#aboutme')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
                 <div className="vl"></div>
-                <Link onClick={() => setSelected('#hireme')} fontSize="2xl" style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
+                <Link onClick={() => setSelected('#hireme')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
             </VStack>
 
             <Flex display={['flex','flex','none','none']} position="fixed" top="0" justifyContent="space-between" alignItems="center" width="100%"
@@ -94,7 +94,7 @@ export default function Navigation(props) {
 
                 <Center><Social direction="row"/></Center>
                 <Flex>
-                    <Image src={"images/theme.svg"} width="40px" alt="mode" onClick={props.toggleColorMode}/>
+                    <Image src={"images/theme.svg"} width="30px" alt="mode" onClick={props.toggleColorMode}/>
                     <IconButton
                         aria-label="Open Menu"
                         size="lg"
@@ -126,7 +126,7 @@ export default function Navigation(props) {
             >
                 <Flex justify="flex-end">
                     <IconButton
-                        mt="1rem"
+                        mt="20px"
                         mr={2}
                         aria-label="Close Menu"
                         size="lg"

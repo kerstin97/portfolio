@@ -31,8 +31,6 @@ export default function Home() {
         <LeftSection toggleColorMode={toggleColorMode} isDark={isDark}/>
         <VStack 
           width={["100%","100%", "auto", "auto"]} 
-          pr={["","", "150px", "150px"]} 
-          pl={["","", "150px", "150px"]} 
           className={styles.content}
         >
           <Hello/>

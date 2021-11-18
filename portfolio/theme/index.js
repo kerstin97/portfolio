@@ -8,7 +8,7 @@ const config = {
 const breakpoints = createBreakpoints({
     sm: "30em",
     md: "55em",
-    lg: "62em",
+    lg: "63em",
     xl: "80em",
 })
 
