@@ -13,6 +13,7 @@ import Wave1 from '../components/svgs/wave1.js'
 import Wave2 from '../components/svgs/wave2.js'
 import Wave3 from '../components/svgs/wave3.js'
 import Wave4 from '../components/svgs/wave4.js'
+import HireMe from '../components/hireme'
 
 export default function Home() {
   const {colorMode, toggleColorMode} = useColorMode();
@@ -52,7 +53,8 @@ export default function Home() {
           <Wave4 
               fill={isDark ? "#1A202C" : "#fff"} 
               background={isDark ? "linear-gradient(180deg, rgba(26,32,44,1) 0%, rgba(49,55,66,1) 49%, rgba(27,33,45,1) 100%)" : "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(233,102,110,0.3981967787114846) 49%, rgba(255,255,255,1)"}
-            />
+          />
+          <HireMe/>
         </VStack>
         <Navigation isDark={isDark} toggleColorMode={toggleColorMode}/>
       </main>
