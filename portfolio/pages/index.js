@@ -56,7 +56,6 @@ export default function Home() {
             />
         </VStack>
         <Navigation isDark={isDark} toggleColorMode={toggleColorMode}/>
-        <Button colorScheme="brand"> Hallo </Button>
       </main>
 
        <footer className={styles.footer}>
