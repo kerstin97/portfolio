@@ -1,19 +1,11 @@
-import { Center, Heading, Flex } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import Project from './project';
+import SectionHeading from './SectionHeading';
 
 export default function Projects() {
     return (
         <section id="projects">
-            <Center>
-                <Heading 
-                    lineHeight={1.5} 
-                    bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" 
-                    bgClip="text" 
-                    size="2xl"
-                >
-                    Projects
-                </Heading>
-            </Center>
+            <SectionHeading title="Projects" />   
 
              <Flex  
                 flexWrap="wrap" 

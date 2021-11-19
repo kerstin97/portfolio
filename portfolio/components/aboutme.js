@@ -1,8 +1,9 @@
 import React, { useEffect, useCallback, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-import { Image, Heading, Text, Center } from '@chakra-ui/react'
+import { Image, Box } from '@chakra-ui/react'
 import { PrevButton, NextButton } from './EmblaCarouselButtons'
+import SectionHeading from './SectionHeading'
 
 export default function AboutMe() {
     const [emblaRef, embla] = useEmblaCarousel({ loop: false }, [Autoplay()])
@@ -24,30 +25,10 @@ export default function AboutMe() {
       }, [embla, onSelect])
 
     return (
-        <section id="aboutme">
-            <Center>
-                <Heading 
-                    lineHeight={1.5} 
-                    bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" 
-                    bgClip="text" 
-                    size="2xl"
-                >
-                    About me
-                </Heading>
-            </Center>
-            <Center>
-                <Text 
-                    textAlign="center" 
-                    fontSize="lg"
-                    width={["100%","100%","700px","800px"]}
-                    pl={["20px","20px","50px","50px"]}
-                    pr={["20px","20px","50px","50px"]}
-                >
-                    I love the nature. When I am in the mountains, I feel free. Listening to loud electronic music and visit festivals with my friends makes me happy. Also pushing me to my personal limits in the gym is a passion.
-                </Text>
-            </Center>
-
-            <div className="embla" >
+        <Box w="100%">
+            <section id="aboutme">
+                <SectionHeading title="About me" />
+                <div className="embla" >
                     <div className="embla__viewport"  ref={emblaRef}>
                         <div className="embla__container">
                             <div className="embla__slide">
@@ -79,7 +60,9 @@ export default function AboutMe() {
                     <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
                     <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
                 </div>
-        </section>
+            </section>
+        </Box>
+        
       
     )
 }

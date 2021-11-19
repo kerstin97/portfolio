@@ -16,7 +16,7 @@
   }
 }
 
-@media(min-width:1008px) and (max-width: 1500px){
+@media(min-width:1008px) {
   .main{
     padding: 4rem 100px;
   }
@@ -36,7 +36,6 @@
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
 }

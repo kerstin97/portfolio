@@ -1,4 +1,4 @@
-import {  GridItem, Flex, Avatar, Heading, Text } from "@chakra-ui/react"
+import { Flex, Avatar, Heading, Text } from "@chakra-ui/react"
 
 export default function Hello() {
     return (
@@ -10,7 +10,7 @@ export default function Hello() {
                 pt={["50px","50px","20px","20px"]}
                 pl={["20px","20px","50px","50px"]}
                 pr={["20px","20px","50px","50px"]}
-            >
+            > 
                 <Heading  
                     size="3xl" 
                     width="100%" 

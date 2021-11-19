@@ -79,15 +79,17 @@ export default function Navigation(props) {
                 flexDir="column" 
                 height="100%"
             >
-                <Link onClick={() => setSelected('#')}  fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
+                <Link
+                  _hover={style} 
+                onClick={() => setSelected('#')}  fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#" || router.asPath ==="/" ? style : null}>Hello</Link>
                 <div className="vl"></div>
-                <Link onClick={() => setSelected('#projects')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#projects" ? style : null}>Projects</Link>
+                <Link _hover={style}  onClick={() => setSelected('#projects')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#projects" ? style : null }>Projects</Link>
                 <div className="vl"></div>
-                <Link onClick={() => setSelected('#timeline')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
+                <Link _hover={style}  onClick={() => setSelected('#timeline')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#timeline" ? style : null}>Timeline</Link>
                 <div className="vl"></div>
-                <Link onClick={() => setSelected('#aboutme')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
+                <Link _hover={style}  onClick={() => setSelected('#aboutme')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
                 <div className="vl"></div>
-                <Link onClick={() => setSelected('#hireme')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
+                <Link _hover={style} onClick={() => setSelected('#hireme')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
             </VStack>
 
             <Flex 
