@@ -13,6 +13,7 @@ import Wave1 from '../components/svgs/wave1.js'
 import Wave2 from '../components/svgs/wave2.js'
 import Wave3 from '../components/svgs/wave3.js'
 import Wave4 from '../components/svgs/wave4.js'
+import { Button } from '@chakra-ui/react';
 
 export default function Home() {
   const {colorMode, toggleColorMode} = useColorMode();
@@ -55,6 +56,7 @@ export default function Home() {
             />
         </VStack>
         <Navigation isDark={isDark} toggleColorMode={toggleColorMode}/>
+        <Button colorScheme="brand"> Hallo </Button>
       </main>
 
        <footer className={styles.footer}>

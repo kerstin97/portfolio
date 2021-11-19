@@ -119,7 +119,7 @@ export default function Navigation(props) {
                         ml={2}
                         icon={<HamburgerIcon />}
                         background="none"
-                        color="#E96685"
+                        colorScheme="brand"
                         onClick={()=>changeDisplay('flex')}
                     />
                 </Flex>
@@ -145,7 +145,7 @@ export default function Navigation(props) {
                         size="lg"
                         variant="outline"
                         background="none"
-                        color="#E96685"
+                        colorScheme="brand"
                         icon={
                             <CloseIcon/>
                         }
