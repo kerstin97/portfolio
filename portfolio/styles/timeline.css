@@ -41,7 +41,7 @@
 }
 .timeline-entry-discription::before{
     content: "";
-    background-color: white;
+    background-color: var(--pink);
     position: absolute;
     height: Calc(100% + 1.2rem);
     left: -2.3rem;
