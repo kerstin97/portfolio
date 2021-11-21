@@ -9,6 +9,7 @@ export default function SectionHeading(props) {
                 bgGradient="linear(to-l, yellow.400, orange.500, pink.400)" 
                 bgClip="text" 
                 size="2xl"
+                textAlign="center"
             >
                 {props.title}
             </Heading>
