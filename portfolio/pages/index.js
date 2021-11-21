@@ -65,7 +65,17 @@ export default function Home() {
       </main>
 
        <footer className={styles.footer}>
-       &copy; 2021 Kerstin Reichinger
+        <p className={styles.copyright}>&copy; 2021 Kerstin Reichinger</p>
+        <a className={styles.link} href="https://icons8.com/icon/38561/postgresql">PostgreSQL icon by Icons8</a>
+        <a className={styles.link} href="https://icons8.com/icon/55251/c-sharp-logo">C Sharp Logo icon by Icons8</a>
+        <a className={styles.link} href="https://icons8.com/icon/ZoxjA0jZDdFZ/kotlin">Kotlin icon by Icons8</a>
+        <a className={styles.link} href="https://icons8.com/icon/UFXRpPFebwa2/mysql-logo">MySQL Logo icon by Icons8</a>
+        <a className={styles.link} href="https://icons8.com/icon/NfbyHexzVEDk/react">React icon by Icons8</a>
+        <a className={styles.link} href="https://icons8.com/icon/22189/ruby-programming-language">Ruby Programming Language icon by Icons8</a>
+        <a className={styles.link} href="https://icons8.com/icon/121463/php-logo">PHP Logo icon by Icons8</a>
+        <a className={styles.link} href="https://icons8.com/icon/107497/css3">CSS3 icon by Icons8</a>
+        <a className={styles.link} href="https://icons8.com/icon/20909/html-5">Html 5 icon by Icons8</a>
+        <a className={styles.link} href="https://icons8.com/icon/gYCTehfTlYk5/javascript-logo">JavaScript Logo icon by Icons8</a>
       </footer>
     </div>
   )
