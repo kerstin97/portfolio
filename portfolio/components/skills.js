@@ -7,7 +7,7 @@ export default function Skills() {
 
     useEffect(() => {
         const planets = document.querySelectorAll('.planet')
-        const p_radii = [22,22,22,22,33,33,33,50,50,50]
+        const p_radii = [220,220,220,220,330,330,330,400,400,400]
         let p_radians = new Array(8)
         p_radians[0] = 0;
         p_radians[1] = 2;
@@ -24,14 +24,14 @@ export default function Skills() {
         const p_orbits = document.querySelectorAll('.p-orbit')
 
         p_orbits.forEach((p_orbit,index)=>{
-            p_orbit.style.height = `${p_radii[index]}vmin`
-            p_orbit.style.width = `${p_radii[index]}vmin`
+            p_orbit.style.height = `${p_radii[index]}px`
+            p_orbit.style.width = `${p_radii[index]}px`
         })
           
         setInterval(() =>{
           planets.forEach((planet,index)=>{
-            planet.style.left = `${Math.cos(p_radians[index]) * p_radii[index]}vmin`
-            planet.style.top = `${Math.sin(p_radians[index]) * p_radii[index]}vmin`
+            planet.style.left = `${Math.cos(p_radians[index]) * p_radii[index]}px`
+            planet.style.top = `${Math.sin(p_radians[index]) * p_radii[index]}px`
             p_radians[index] += p_velocities[index] * 0.007
           })
         },1000/60)
