@@ -89,6 +89,8 @@ export default function Navigation(props) {
                 <div className="vl"></div>
                 <Link _hover={style}  onClick={() => setSelected('#aboutme')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#aboutme" ? style : null}>About Me</Link>
                 <div className="vl"></div>
+                <Link _hover={style} onClick={() => setSelected('#skills')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#skills" ? style : null}>Skills</Link>
+                <div className="vl"></div>
                 <Link _hover={style} onClick={() => setSelected('#hireme')} fontSize={[null,"xl","xl","2xl"]} style={router.asPath ==="/#hireme" ? style : null}>Hire Me</Link>
             </VStack>
 
@@ -161,6 +163,7 @@ export default function Navigation(props) {
                     <Link onClick={() => selectMobile('#projects')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%"  style={router.asPath ==="/#projects" ? mobileActive : null}>Projects</Link>
                     <Link onClick={() => selectMobile('#timeline')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%" style={router.asPath ==="/#timeline" ? mobileActive : null}>Timeline</Link>
                     <Link onClick={() => selectMobile('#aboutme')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%" style={router.asPath ==="/#aboutme" ? mobileActive : null}>About Me</Link>
+                    <Link onClick={() => selectMobile('#skills')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%" style={router.asPath ==="/#skills" ? mobileActive : null}>Skills</Link>
                     <Link onClick={() => selectMobile('#hireme')} fontSize="2xl" borderBottom="1px solid #fff" textAlign="center" width="100%" style={router.asPath ==="/#hireme" ? mobileActive : null}>Hire Me</Link>
                 </Flex>
             </Flex>
