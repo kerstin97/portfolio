@@ -38,5 +38,4 @@ export default async function (req, res) {
 
   console.log(req.body);
   res.send("success");
-  //return res.status(200);
 }

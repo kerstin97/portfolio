@@ -91,7 +91,6 @@ export default function HireMe() {
     }
 
     setErrors({ ...tempErrors });
-    console.log("errors", errors);
     return isValid;
   };
 

@@ -27,8 +27,40 @@ export default function Home() {
     <Box className={styles.container} bg={bgColor}>
       <Head>
         <title>Kerstin Reichinger</title>
-        <meta name="description" content="My portfolio" />
+        <meta
+          name="description"
+          content="I am Kerstin, a web developer based in Austria with a passion for
+          learning new stuff"
+        />
+        <meta
+          property="og:description"
+          content="I am Kerstin, a web developer based in Austria with a passion for
+          learning new stuff"
+        />
+        <meta property="og:url" content="https://www.kerstin.dev" />
+        <meta property="og:title" content="Kerstin Reichinger - Portfolio" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#232934"></meta>
       </Head>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <main className={styles.main}>
