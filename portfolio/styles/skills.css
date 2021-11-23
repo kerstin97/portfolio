@@ -1,0 +1,44 @@
+.object {
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    transform: translate(0px);
+}
+
+.p-orbit {
+    border:1px solid var(--pink);
+    opacity: 0.5;
+    background: transparent;
+}
+
+.planet {
+    z-index:100;
+    height: 40px;
+    width: 40px;
+}
+
+@media (max-width: 700px) {
+    #sun {
+        height: 40px;
+        width: 40px;
+    }
+}
+  
+@media (min-width: 701px){
+    #sun {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+
+.universe {
+    position: relative;
+    margin:0;
+    padding: 0;
+    height:500px;
+}

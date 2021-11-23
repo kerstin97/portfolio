@@ -26,7 +26,7 @@ export default function Project(props) {
 
             <Link 
                 href={props.link} 
-                color="#E96685" 
+                color= "brand.500"
                 isExternal
             >
                 <Text fontSize="xl">More Details</Text>

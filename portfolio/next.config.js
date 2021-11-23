@@ -1,4 +1,8 @@
 module.exports = {
   reactStrictMode: true,
-  swcMinify: false 
+  swcMinify: false ,
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 }

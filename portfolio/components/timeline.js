@@ -17,7 +17,7 @@ export default function Timeline() {
                                 <div className="timeline-entry-title"><Heading fontSize={["sm","lg","xl","xl"]}>Salzburg University of Applied Sciences</Heading></div>
                                 <div className="timeline-entry-discription"><i>
                                     <Text fontSize={["sm","lg","xl","xl"]}>This Study includes everything about Multimedia and web development and will finish bacholer as a full stack web dev</Text>
-                                    <Link href="https://multimediatechnology.at" color="#E96685" target="_blank" rel="noopener noreferrer"><Text fontSize={["sm","lg","xl","xl"]}>https://multimediatechnology.at</Text></Link>
+                                    <Link href="https://multimediatechnology.at" color="brand.500" target="_blank" rel="noopener noreferrer"><Text fontSize={["sm","lg","xl","xl"]}>https://multimediatechnology.at</Text></Link>
                                 </i></div>
                             </div>
                         </div>
@@ -28,9 +28,9 @@ export default function Timeline() {
                                 <div className="timeline-entry-title"><Heading fontSize={["sm","lg","xl","xl"]}>Software Developer and Project Manager @Porsche Informatik</Heading></div>
                                 <div className="timeline-entry-discription"><i>
                                     <Text fontSize={["sm","lg","xl","xl"]}>I was part of the developer team for DasWeltauto. Languages: HTML5, CSS, Angular </Text>
-                                    <Link href="https://www.dasweltauto.at/" color="#E96685" target="_blank" rel="noopener noreferrer"><Text fontSize={["sm","lg","xl","xl"]}>https://www.dasweltauto.at/</Text></Link>
+                                    <Link href="https://www.dasweltauto.at/" color="brand.500" target="_blank" rel="noopener noreferrer"><Text fontSize={["sm","lg","xl","xl"]}>https://www.dasweltauto.at/</Text></Link>
                                     <Text fontSize={["sm","lg","xl","xl"]}>Later I lead the project Digitale Antragsstrecke/Porsche Bank Shop with some colleagues, which realizes the process of buying a car online. </Text>
-                                    <Link href="https://www.porschebank.at/shop/fahrzeugsuche" color="#E96685" target="_blank" rel="noopener noreferrer"><Text fontSize={["sm","lg","xl","xl"]}>https://www.porschebank.at/shop/fahrzeugsuche</Text></Link>
+                                    <Link href="https://www.porschebank.at/shop/fahrzeugsuche" color="brand.500" target="_blank" rel="noopener noreferrer"><Text fontSize={["sm","lg","xl","xl"]}>https://www.porschebank.at/shop/fahrzeugsuche</Text></Link>
                                 </i></div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ export default function Timeline() {
                                 <div className="timeline-entry-discription"><i>
                                     <Text fontSize={["sm","lg","xl","xl"]}>Electronics / Bionics </Text>
                                     <Text fontSize={["sm","lg","xl","xl"]}>Including Microcontroller Programming, Java, C++, Laboratory exercies...</Text>
-                                    <Link href="https://www.htl-braunau.at/live" color="#E96685" target="_blank" rel="noopener noreferrer"><Text fontSize={["sm","lg","xl","xl"]}>https://www.htl-braunau.at/live</Text></Link>
+                                    <Link href="https://www.htl-braunau.at/live" color="brand.500" target="_blank" rel="noopener noreferrer"><Text fontSize={["sm","lg","xl","xl"]}>https://www.htl-braunau.at/live</Text></Link>
                                 </i></div>
                             </div>
                         </div>
