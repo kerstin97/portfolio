@@ -1,5 +1,6 @@
 import React from "react";
 import { useColorMode, useColorModeValue, VStack, Box } from "@chakra-ui/react";
+import { ColorModeScript } from "@chakra-ui/react";
 import Head from "next/head";
 import "@fontsource/ibm-plex-sans";
 import styles from "../styles/Home.module.css";
@@ -15,6 +16,7 @@ import AboutMe from "../components/aboutme";
 import LeftSection from "../components/leftSection";
 import Skills from "../components/skills";
 import HireMe from "../components/hireme";
+import theme from "../theme";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -28,7 +30,7 @@ export default function Home() {
         <meta name="description" content="My portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <main className={styles.main}>
         <LeftSection toggleColorMode={toggleColorMode} isDark={isDark} />
         <VStack
