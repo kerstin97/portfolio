@@ -15,6 +15,7 @@ import Wave3 from "../components/svgs/wave3.js";
 import Wave4 from "../components/svgs/wave4.js";
 import { Box } from "@chakra-ui/react";
 import Skills from "../components/skills";
+import HireMe from "../components/hireme";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -73,6 +74,15 @@ export default function Home() {
           />
           <AboutMe />
           <Wave1
+            fill={isDark ? "#232934" : "#F7FAFC"}
+            background={
+              isDark
+                ? "linear-gradient(180deg, rgba(35,41,52,1) 0%, rgba(60,71,71,1) 49%, rgba(35,41,52,1) 100%)"
+                : "linear-gradient(180deg, rgba(247,250,252,1) 0%, rgba(233,102,110,0.3981967787114846) 49%, rgba(247,250,252,1) 100%)"
+            }
+          />
+          <HireMe />
+          <Wave2
             fill={isDark ? "#232934" : "#F7FAFC"}
             background={
               isDark
