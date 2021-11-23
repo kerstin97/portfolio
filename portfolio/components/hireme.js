@@ -38,7 +38,7 @@ export default function HireMe() {
         email,
         message,
       };
-      fetch("/api/contact", {
+      await fetch("/api/contact", {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
