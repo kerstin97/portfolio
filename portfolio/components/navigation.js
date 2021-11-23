@@ -140,7 +140,7 @@ export default function Navigation(props) {
           Hire Me
         </Link>
       </VStack>
-
+      {/* mobile nav closed */}
       <Flex
         display={["flex", "flex", "none", "none"]}
         position="fixed"
@@ -149,6 +149,7 @@ export default function Navigation(props) {
         alignItems="center"
         width="100%"
         bgColor={props.isDark ? "#1A202C" : "#eabebe"}
+        zIndex={100}
       >
         <Box paddingTop="15">
           <Logo fill={props.isDark ? "#fff" : "#303641"} alt="Logo" />
@@ -179,11 +180,12 @@ export default function Navigation(props) {
         </Flex>
       </Flex>
 
+      {/* mobile nav opened*/}
       <Flex
         w="100%"
         h="100vh"
         bgColor={props.isDark ? "#1A202C" : "#eabebe"}
-        zIndex={30}
+        zIndex={200}
         pos="fixed"
         top="0"
         left="0"
