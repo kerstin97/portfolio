@@ -19,6 +19,7 @@ export default function LeftSection(props) {
         width="40px"
         alt="mode"
         onClick={props.toggleColorMode}
+        cursor="pointer"
       />
     </VStack>
   );
