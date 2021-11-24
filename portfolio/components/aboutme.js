@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useState } from "react";
-import { Image, Box } from "@chakra-ui/react";
+import { Image, Box, Text, Center } from "@chakra-ui/react";
 import { PrevButton, NextButton } from "./EmblaCarouselButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -28,6 +28,20 @@ export default function AboutMe() {
     <Box w="100%">
       <section id="aboutme">
         <SectionHeading title="About me" />
+        <Center>
+          <Text
+            textAlign="center"
+            fontSize="lg"
+            width={["100%", "100%", "700px", "800px"]}
+            pl={["20px", "20px", "50px", "50px"]}
+            pr={["20px", "20px", "50px", "50px"]}
+          >
+            I love the nature and when I&#39;m in the mountains, I feel free.
+            Listening to loud electronic music and visiting festivals with my
+            friends makes me happy. Also pushing me to my personal limits in the
+            gym is one of my passions.
+          </Text>
+        </Center>
         <div className="embla">
           <div className="embla__viewport" ref={emblaRef}>
             <div className="embla__container">
