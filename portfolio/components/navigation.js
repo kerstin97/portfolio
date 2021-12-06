@@ -49,32 +49,6 @@ export default function Navigation(props) {
     color: "#E96685",
   };
 
-  //useEffect(() => {
-  //      if(typeof window === 'object'){
-
-  //          const hello = document.getElementById("hello");
-  //          const projects = document.getElementById("projects");
-  //          const timeline = document.getElementById("timeline");
-
-  //         window.addEventListener('scroll', function (e) {
-  //             if(window.scrollY < hello.offsetTop) {
-  //                 setSelected('#hello');
-  //             }
-  //             else if (window.scrollY < projects.offsetTop)
-  //             {
-  //                 setSelected('#projects');
-  //             }
-  //             else if (window.scrollY < timeline.offsetTop)
-  //             {
-  //                 setSelected('#timeline');
-  //             }
-  //             else {
-  //                 setSelected('#timeline');
-  //             }
-  //         });
-  //     }
-  //  })
-
   return (
     <>
       <VStack
