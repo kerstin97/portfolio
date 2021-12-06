@@ -9,7 +9,7 @@ export default function SectionHeading(props) {
         bgClip="text"
         size="2xl"
         textAlign="center"
-        max-maxWidth="90%"
+        maxWidth="90%"
       >
         {props.title}
       </Heading>

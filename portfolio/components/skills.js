@@ -5,48 +5,55 @@ import SectionHeading from "./SectionHeading";
 
 export default function Skills() {
   useEffect(() => {
-    const planets = document.querySelectorAll(".planet");
-    //how far each language is away from center
-    var p_radii = new Array(10);
-    var orbit_sizes = new Array(3);
-    if (window.innerWidth < 450) {
-      p_radii = [110, 110, 110, 110, 200, 200, 200, 300, 300, 300];
-      orbit_sizes = [110, 200, 300];
-    } else {
-      p_radii = [220, 220, 220, 220, 330, 330, 330, 450, 450, 450];
-      orbit_sizes = [220, 330, 450];
-    }
+    ReziseSkills();
+    window.addEventListener("resize", ReziseSkills);
 
-    //start points of each language
-    let p_radians = new Array(8);
-    (p_radians[0] = 0), (p_radians[4] = 0), (p_radians[7] = 0);
-    (p_radians[1] = 2), (p_radians[5] = 2), (p_radians[8] = 2);
-    (p_radians[2] = 4), (p_radians[6] = 4), (p_radians[9] = 4);
-    p_radians[3] = 5;
+    function ReziseSkills() {
+      const planets = document.querySelectorAll(".planet");
+      //how far each language is away from center
+      var p_radii = new Array(10);
+      var orbit_sizes = new Array(3);
+      if (window.innerWidth < 500) {
+        p_radii = [110, 110, 110, 110, 200, 200, 200, 280, 280, 280];
+        orbit_sizes = [110, 200, 280];
+      } else {
+        p_radii = [220, 220, 220, 220, 330, 330, 330, 450, 450, 450];
+        orbit_sizes = [220, 330, 450];
+      }
 
-    //how fast each language moves
-    const p_velocities = [
-      1.607, 1.607, 1.607, 1.607, 1, 1, 1, 0.802, 0.802, 0.802,
-    ];
+      //start points of each language
+      let p_radians = new Array(8);
+      (p_radians[0] = 0), (p_radians[4] = 0), (p_radians[7] = 0);
+      (p_radians[1] = 2), (p_radians[5] = 2), (p_radians[8] = 2);
+      (p_radians[2] = 4), (p_radians[6] = 4), (p_radians[9] = 4);
+      p_radians[3] = 5;
 
-    const p_orbits = document.querySelectorAll(".p-orbit");
+      //how fast each language moves
+      const p_velocities = [
+        1.607, 1.607, 1.607, 1.607, 1, 1, 1, 0.802, 0.802, 0.802,
+      ];
 
-    p_orbits.forEach((p_orbit, index) => {
-      p_orbit.style.height = `${orbit_sizes[index]}px`;
-      p_orbit.style.width = `${orbit_sizes[index]}px`;
-    });
+      const p_orbits = document.querySelectorAll(".p-orbit");
 
-    setInterval(() => {
-      planets.forEach((planet, index) => {
-        planet.style.left = `${Math.cos(p_radians[index]) * p_radii[index]}px`;
-        planet.style.top = `${Math.sin(p_radians[index]) * p_radii[index]}px`;
-        if (index == 4 || index == 5 || index == 6) {
-          p_radians[index] -= p_velocities[index] * 0.007;
-        } else {
-          p_radians[index] += p_velocities[index] * 0.007;
-        }
+      p_orbits.forEach((p_orbit, index) => {
+        p_orbit.style.height = `${orbit_sizes[index]}px`;
+        p_orbit.style.width = `${orbit_sizes[index]}px`;
       });
-    }, 1000 / 60);
+
+      setInterval(() => {
+        planets.forEach((planet, index) => {
+          planet.style.left = `${
+            Math.cos(p_radians[index]) * p_radii[index]
+          }px`;
+          planet.style.top = `${Math.sin(p_radians[index]) * p_radii[index]}px`;
+          if (index == 4 || index == 5 || index == 6) {
+            p_radians[index] -= p_velocities[index] * 0.007;
+          } else {
+            p_radians[index] += p_velocities[index] * 0.007;
+          }
+        });
+      }, 1000 / 60);
+    }
   }, []);
 
   return (

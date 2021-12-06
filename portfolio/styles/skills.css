@@ -1,3 +1,9 @@
+.universe {
+    position: relative;
+    margin:0;
+    padding: 0;
+}
+
 .object {
     border-radius: 50%;
     position: absolute;
@@ -21,24 +27,40 @@
     width: 40px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 880px) {
     #sun {
         height: 40px;
         width: 40px;
     }
+
+    .planet {
+        z-index:100;
+        height: 30px;
+        width: 30px;
+    }
+
+    .universe {
+        height: 360px;
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 880px) {
+    #skills {
+        min-width: 500px;
+    }
 }
   
-@media (min-width: 701px){
+@media (min-width: 881px){
     #sun {
         height: 70px;
         width: 70px;
     }
 }
 
-
-.universe {
-    position: relative;
-    margin:0;
-    padding: 0;
-    height:500px;
+@media (min-width: 500px) {
+    .universe {
+        height:500px;
+    }
 }
+
